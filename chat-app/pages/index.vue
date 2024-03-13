@@ -1,9 +1,9 @@
 <template>
     <div class="w-full h-full flex">
         <Sidebar />
-        <div class="w-full flex-1 h-full bg-red-600">
+        <div class="w-full flex-1 h-full bg-primary">
             <main class="w-full h-full">
-                <div class="mx-auto w-[720px] h-full">
+                <div class="mx-auto w-full h-full">
                     <ChatBox />
                 </div>
             </main>

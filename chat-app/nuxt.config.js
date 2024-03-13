@@ -3,20 +3,21 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
     "nuxt-socket-io",
-    "@nuxtjs/google-fonts"
+    "nuxt-icons"
   ],
   io: {
     sockets: [{
       name: 'main',
-      url: 'http://localhost:3000/'
-    }]
-    // server: {
-    //   /* CORS options */ 
-    //   cors: { 
-    //     origin: "*"
-    //   }
-    // }
+      url: 'http://localhost:5001'
+    }],
+    server: {
+      /* CORS options */ 
+      cors: { 
+        origin: "*"
+      }
+    }
   },
   googleFonts: {
     families: {

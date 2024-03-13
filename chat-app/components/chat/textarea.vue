@@ -1,13 +1,30 @@
 <template>
-    <div class="">
-        <textarea class="resize-none w-full max-h-fit m-2 p-2 outline-none border border-slate-500 focus:ring-1 ring-slate-500" name="message" rows="1" placeholder="Message STELLA"/>
-    </div>
+    <form action="handleSubmitMsg" method="post">
+        <div class="flex w-full p-2 gap-2">
+            <input type="text" name="message" rows="1" placeholder="Message STELLA"/>
+            <ButtonChat />
+        </div>
+    </form>
 </template>
 
-<script lang="ts" setup>
-
+<script>
+export default {
+    data() {
+        return {
+            socket: {}
+        }
+    },
+    mounted() {
+        if (process.client) {
+            this.socket = this.$nuxtSocket({
+                name: 'main',
+                channel: '/chat'
+            })
+    
+            this.socket.on('connect', () => {
+                // console.log('askhasdhas')
+            })
+        }
+    }
+}
 </script>
-
-<style>
-
-</style>

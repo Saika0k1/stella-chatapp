@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-200 w-full h-screen overflow-hidden font-space">
+  <div class="bg-slate-200 w-full h-screen overflow-hidden font-space text-orange-50">
     <NuxtPage/>
   </div>
 </template>
@@ -21,7 +21,7 @@ button, input[type="submit"] {
 }
 
 input[type="text"], input[type="password"] {
-  @apply outline-none p-1 bg-white bg-opacity-0 focus:bg-opacity-50 transition ease-linear duration-200 w-full bg-transparent border-b border-blue-700 placeholder:text-sm
+  @apply w-full h-12 py-3 px-6 outline-none bg-lighter focus:bg-lightest rounded-full
 }
 
 a {
