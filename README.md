@@ -1,4 +1,4 @@
-# Stella Chat App
+# STELLA Chat App
 ## Quick Start
 1. To get this app running, first clone this repository.
 
