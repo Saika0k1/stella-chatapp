@@ -6,10 +6,18 @@
 </template>
 
 <script setup>
-    defineProps([
-        'from',
-        'msg'
-    ])
+defineProps([
+    'from',
+    'msg'
+])
+
+const emit = defineEmits([
+    'scroll'
+])
+
+onMounted(() => {
+    emit('scroll')
+})
 </script>
 
 <style>

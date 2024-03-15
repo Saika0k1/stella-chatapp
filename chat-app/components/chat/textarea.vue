@@ -1,6 +1,6 @@
 <template>
     <div class="flex p-2 gap-2">
-        <input autocomplete="off" type="text" name="message" rows="1" placeholder="Message STELLA" v-model="message"/>
+        <input @keyup.enter="submitChat" autocomplete="off" type="text" name="message" rows="1" placeholder="Message STELLA" v-model="message"/>
         <ButtonChat @click="submitChat"/>
     </div>
 </template>

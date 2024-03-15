@@ -21,8 +21,8 @@
             type="password"
             name="password">
         </div>
-        <div class="flex flex-row gap-x-2 justify-end">
-            <button>Sign up</button>
+        <div class="flex flex-col gap-y-2 items-end">
+            <p class="text-sm">Don't have an account? <NuxtLink to="/register" class="text-blue-400">Register here.</NuxtLink></p>
             <ButtonSubmit label="Login" />
         </div>
     </form>

@@ -28,10 +28,6 @@ export default {
         if (process.client && localStorage.getItem('authToken') === null) {
             await navigateTo('/login')
         }
-    
-        if (process.client) {
-            authToken.value = localStorage.getItem('authToken')
-        }
 
         return {
             authToken,

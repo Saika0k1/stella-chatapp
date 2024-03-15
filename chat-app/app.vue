@@ -17,7 +17,7 @@
 
 <style>
 button, input[type="submit"] {
-  @apply border border-blue-700 text-blue-700 max-w-20 min-w-fit px-6 py-2 rounded-full pt-1 font-semibold
+  @apply border border-blue-700 text-blue-700 max-w-20 min-w-fit px-6 py-2 rounded-full pt-1 font-semibold h-12
 }
 
 input[type="text"], input[type="password"] {

@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="flex items-end pl-4">
-            <ButtonSubmit class="h-12" @click="logOut" label="Logout" />
+            <ButtonSubmit @click="logOut" label="Logout" />
         </div>
     </div>
 </template>
