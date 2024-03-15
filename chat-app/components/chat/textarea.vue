@@ -1,30 +1,22 @@
 <template>
-    <form action="handleSubmitMsg" method="post">
-        <div class="flex w-full p-2 gap-2">
-            <input type="text" name="message" rows="1" placeholder="Message STELLA"/>
-            <ButtonChat />
-        </div>
-    </form>
+    <div class="flex p-2 gap-2">
+        <input autocomplete="off" type="text" name="message" rows="1" placeholder="Message STELLA" v-model="message"/>
+        <ButtonChat @click="submitChat"/>
+    </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            socket: {}
-        }
-    },
-    mounted() {
-        if (process.client) {
-            this.socket = this.$nuxtSocket({
-                name: 'main',
-                channel: '/chat'
-            })
-    
-            this.socket.on('connect', () => {
-                // console.log('askhasdhas')
-            })
-        }
-    }
+<script setup>
+const message = ref('')
+
+const emit = defineEmits([
+    'user-message'
+])
+
+async function submitChat() {
+    console.log(message.value)
+
+    emit('user-message', message.value)
+
+    message.value = ''
 }
 </script>

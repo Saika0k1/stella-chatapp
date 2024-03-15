@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "nuxt-socket-io",
-    "nuxt-icons"
+    "nuxt-icons",
+    "@vueuse/nuxt"
   ],
   io: {
     sockets: [{

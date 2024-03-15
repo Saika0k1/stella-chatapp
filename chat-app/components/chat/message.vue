@@ -1,7 +1,7 @@
 <template>
     <div class="hover:bg-opacity-10 bg-primary bg-opacity-0 p-4 duration-100">
         <strong>{{ from }}</strong>
-        <p>{{ msg }}</p>
+        <p class="whitespace-pre-line">{{ msg }}</p>
     </div>
 </template>
 

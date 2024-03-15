@@ -2,6 +2,7 @@
   <div class="w-full pt-48">
     <form 
     @submit.prevent="handleSubmit"
+    autocomplete="off"
     class="m-auto flex flex-col w-72 gap-y-4">
         <div class="space-y-1">
             <p class="font-semibold text-blue-700">Email</p>
@@ -51,7 +52,7 @@
             }
         }))
 
-        storeToken(res._rawValue.access_token)
+        storeToken(res.value.access_token)
         await navigateTo('/')
     }
 
