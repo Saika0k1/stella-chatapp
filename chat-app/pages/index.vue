@@ -29,6 +29,10 @@ export default {
             await navigateTo('/login')
         }
 
+        if (process.client) {
+            authToken.value = localStorage.getItem('authToken')
+        }
+
         return {
             authToken,
             workspace, 
